@@ -1,0 +1,12 @@
+.active-sets__item {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #b9b9b9;
+}
+
+.active-sets {
+  display: grid;
+  grid-template-columns: repeat(3, 208px);
+  gap: 20px;
+}

@@ -1,19 +1,27 @@
 import { useState, useEffect } from "react";
 
-const WordItem = ({id, onDelete, index}) => {
+const WordItem = ({id, onDelete, index, setWordAndTranslation}) => {
 
     return (
         <tr>
-            <td></td>
             <th>{index}</th>
             <td>
-                <input required type="text" class="form-control" placeholder="Enter word" />
+                <input required type="text" 
+                className="form-control" 
+                name="word"
+                placeholder="Enter word"
+                onChange={(e) => setWordAndTranslation(e, index, 'word')} />
             </td>
             <td>
-                <input type="text" class="form-control" placeholder="Translation" />
+                <input required 
+                type="text" 
+                className="form-control" 
+                name="translation"
+                placeholder="Translation"
+                onChange={(e) => setWordAndTranslation(e, index, 'translation')} />
             </td>
             <td>
-                <button onClick={() => onDelete(id)} style={{border: 'none'}}>
+                <button type="button" onClick={() => onDelete(id)} style={{border: 'none'}}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"

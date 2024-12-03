@@ -1,9 +1,10 @@
 import Content from '../content/Content';
+import DictionaryTable from '../dictionaryTable/DictionaryTable';
 
 const Dictionary = () => {
   return(
     <Content>
-          <p>Dictionary</p>
+          <DictionaryTable/>
     </Content>
   );
 }

@@ -1,44 +1,11 @@
-import './activeSets.css';
+import CardSet from '../cardSet/CardSet';
 
 const ActiveSets = () => {
-
+  const titleArray = ["Top 50 words", "Top 75 words", "Animals", "Cars"];
   return(
     <>
     <div className="mb-30">Active sets</div>
-    <div className="active-sets">
-      <div className="active-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="active-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="active-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="active-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-    </div>
+    <CardSet wrap={3} titleArray={titleArray}/>
     </>
   );
 }

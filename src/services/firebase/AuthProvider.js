@@ -1,10 +1,6 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { auth, googleProvider } from "./firebase-config";
-import {
-  signInWithPopup,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { auth, googleProvider } from './firebase-config';
+import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 
 const AuthContext = createContext(null);
 
@@ -24,7 +20,7 @@ export const AuthProvider = ({ children }) => {
     try {
       await signInWithPopup(auth, googleProvider);
     } catch (err) {
-      console.error("Error signing in with Google:", err);
+      console.error('Error signing in with Google:', err);
     }
   };
 
@@ -32,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     try {
       await signOut(auth);
     } catch (err) {
-      console.error("Error signing out:", err);
+      console.error('Error signing out:', err);
     }
   };
 

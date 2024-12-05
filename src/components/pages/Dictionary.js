@@ -2,11 +2,11 @@ import Content from '../content/Content';
 import DictionaryTable from '../dictionaryTable/DictionaryTable';
 
 const Dictionary = () => {
-  return(
+  return (
     <Content>
-          <DictionaryTable/>
+      <DictionaryTable />
     </Content>
   );
-}
+};
 
 export default Dictionary;

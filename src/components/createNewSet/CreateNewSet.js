@@ -1,14 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
-import WordItem from "../wordItem/WordItem";
-import CardSet from "../cardSet/CardSet";
-import { addSet, getAllSets } from "../../services/firebase/dbService";
+import React, { useState, useEffect, useRef } from 'react';
+import WordItem from '../wordItem/WordItem';
+import CardSet from '../cardSet/CardSet';
+import { addSet, getAllSets } from '../../services/firebase/dbService';
 
 const CreateNewSet = () => {
   const [counter, setCounter] = useState(1);
   const [rows, setRows] = useState([]);
-  const [newTitle, setNewTitle] = useState("");
+  const [newTitle, setNewTitle] = useState('');
   const [newWordAndTranslation, setNewWordAndTranslation] = useState([]);
-  const [titleArray, setTitleArray] = useState([{title: '', isChecked: false}]);
+  const [titleArray, setTitleArray] = useState([
+    { title: '', isChecked: false },
+  ]);
   const errorRef = useRef('');
 
   // Загрузка всех наборов при монтировании компонента
@@ -38,7 +40,7 @@ const CreateNewSet = () => {
       await addSet(newTitle, newWordAndTranslation); // Добавляем новый набор
       setRows([]); // Очищаем строки
       setCounter(1); // Сбрасываем счётчик
-      setNewTitle(""); // Сбрасываем заголовок
+      setNewTitle(''); // Сбрасываем заголовок
       setNewWordAndTranslation([]); // Очищаем массив слов
       fetchTitles(); // Обновляем карточки
     } else {
@@ -57,7 +59,10 @@ const CreateNewSet = () => {
   };
 
   const addVirtualArrow = () => {
-    setNewWordAndTranslation([...newWordAndTranslation, { word: "", translation: "" }]);
+    setNewWordAndTranslation([
+      ...newWordAndTranslation,
+      { word: '', translation: '' },
+    ]);
   };
 
   return (
@@ -71,7 +76,7 @@ const CreateNewSet = () => {
             <label
               className="form-label"
               htmlFor="title"
-              style={{ margin: "0 15px 0 0", fontSize: "16px" }}
+              style={{ margin: '0 15px 0 0', fontSize: '16px' }}
             >
               Title
             </label>
@@ -87,7 +92,7 @@ const CreateNewSet = () => {
             <button
               type="submit"
               className="btn btn-secondary"
-              style={{ marginLeft: "auto" }}
+              style={{ marginLeft: 'auto' }}
             >
               Save
             </button>
@@ -95,7 +100,7 @@ const CreateNewSet = () => {
           <table className="table text-center align-middle table-hover">
             <caption>Number of words: {newWordAndTranslation.length}</caption>
             <thead className="table-dark">
-              <tr>      
+              <tr>
                 <th scope="col">№</th>
                 <th scope="col">Word</th>
                 <th scope="col">Translate</th>
@@ -118,8 +123,8 @@ const CreateNewSet = () => {
                     type="button"
                     className="btn btn-success"
                     style={{
-                      height: "40px",
-                      width: "60px",
+                      height: '40px',
+                      width: '60px',
                     }}
                     onClick={() => {
                       addRow();

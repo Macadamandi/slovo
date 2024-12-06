@@ -1,10 +1,10 @@
 import Content from '../content/Content';
 import CreateNewSet from '../createNewSet/CreateNewSet';
 
-const Sets = () => {
+const Sets = ({isFavorite}) => {
   return(
     <Content>
-          <CreateNewSet/>
+          <CreateNewSet isFavorite={isFavorite}/>
     </Content>
   );
 }

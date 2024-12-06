@@ -8,6 +8,6 @@
 .favorities-sets {
   display: grid;
   grid-template-columns: repeat(5, 208px);
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
 }

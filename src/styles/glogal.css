@@ -13,3 +13,7 @@
 .form-control:disabled {
   background-color: #ffffff;
 }
+
+.swiper-slide {
+  border-radius: 10px;
+}

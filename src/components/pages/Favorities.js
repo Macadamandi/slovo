@@ -2,11 +2,11 @@ import Content from '../content/Content';
 import FavoritiesSets from '../favoritesSets/FavoritiesSets';
 
 const Favorities = () => {
-  return(
+  return (
     <Content>
-          <FavoritiesSets/>
+      <FavoritiesSets />
     </Content>
   );
-}
+};
 
 export default Favorities;

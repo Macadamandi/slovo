@@ -1,8 +1,5 @@
-
-
 const ShowSet = () => {
-
-  return(<></>);
-}
+  return <></>;
+};
 
 export default ShowSet;

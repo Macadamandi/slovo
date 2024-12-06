@@ -1,0 +1,79 @@
+.card-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.card-wrap__body {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+/* .card-wrap__body:hover .card-wrap__front {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.card-wrap__body:hover .card-wrap__back {
+  transform: rotateY(360deg);
+  cursor: pointer;
+} */
+
+.card-wrap__front,
+.card-wrap__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px gray;
+}
+
+.card-wrap__front {
+  background-color: #fff;
+}
+
+.card-wrap__back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.prev {
+  position: absolute;
+  left: calc(35%);
+  top: 40%;
+}
+
+.next {
+  position: absolute;
+  left: calc(61%);
+  top: 40%;
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+}
+
+.card-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mySwiper {
+  width: 300px;
+}

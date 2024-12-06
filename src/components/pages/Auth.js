@@ -1,9 +1,7 @@
-import { AuthService } from "../../services/firebase/authService";
+import { AuthService } from '../../services/firebase/authService';
 
 const Auth = () => {
-  return(
-    <AuthService />
-  );
-}
+  return <AuthService />;
+};
 
 export default Auth;

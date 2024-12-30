@@ -1,0 +1,87 @@
+.card-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Угол обзора для 3D-эффекта */
+}
+
+.card-wrap__body {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d; /* Сохраняем 3D-преобразования */
+  transform: rotateY(0); /* Начальное положение */
+  transition: transform 0.6s ease-in-out; /* Плавное вращение */
+  cursor: pointer;
+}
+
+.card-wrap__body.flipped {
+  transform: rotateY(180deg); /* Поворот на 180 градусов */
+}
+
+.card-wrap__front,
+.card-wrap__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Для плавного отображения */
+  backface-visibility: hidden; /* Скрываем заднюю часть */
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px gray;
+}
+
+.card-wrap__front {
+  background-color: #fff;
+  z-index: 2; /* Передняя часть всегда поверх */
+}
+
+.card-wrap__back {
+  background-color: #fff;
+  transform: rotateY(180deg); /* Начальное положение для задней части */
+}
+
+.prev {
+  position: absolute;
+  left: calc(35%);
+  top: 40%;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  left: calc(61%);
+  top: 40%;
+  cursor: pointer;
+}
+
+.card-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.mySwiper {
+  width: 300px;
+}
+
+.exit {
+  margin-bottom: 100px;
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

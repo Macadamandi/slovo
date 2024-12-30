@@ -1,12 +1,12 @@
 import Content from '../content/Content';
 import CreateNewSet from '../createNewSet/CreateNewSet';
 
-const Sets = () => {
-  return(
+const Sets = ({ isFavorite }) => {
+  return (
     <Content>
-          <CreateNewSet/>
+      <CreateNewSet isFavorite={isFavorite} />
     </Content>
   );
-}
+};
 
 export default Sets;

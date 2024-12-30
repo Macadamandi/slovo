@@ -1,77 +1,23 @@
-import './repeatSets.css'
-const RepeatSets = () => {
+import CardSet from '../cardSet/CardSet';
 
-  return(
+import './repeatSets.css';
+
+const RepeatSets = () => {
+  const titleArray = [
+    'Most pupular 1000 words',
+    'Intermediate 500 words',
+    'Languages',
+    'Arts',
+    'Culture',
+    'Nature',
+  ];
+
+  return (
     <>
-    <div className="mb-30">Repeat sets</div>
-    <div className="repeat-sets">
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-      <div className="repeat-sets__item">
-        <div>100 words</div>
-        <img src="/images/picture.jpg" alt="" />
-        <div>
-          <p>Top 100 words</p>
-        </div>
-        <button type="button" class="btn btn-success w-100">Learn</button>
-      </div>
-    </div>
+      <div className="mb-30">Repeat sets</div>
+      <CardSet wrap={3} titleArray={titleArray} />
     </>
   );
-}
+};
 
 export default RepeatSets;

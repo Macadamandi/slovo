@@ -9,3 +9,11 @@
 .mb-20 {
   margin-bottom: 20px;
 }
+
+.form-control:disabled {
+  background-color: #ffffff;
+}
+
+.swiper-slide {
+  border-radius: 10px;
+}

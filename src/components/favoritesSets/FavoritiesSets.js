@@ -1,103 +1,25 @@
-import "./favoritiesSets.css";
+import CardSet from '../cardSet/CardSet';
+import './favoritiesSets.css';
 
 const FavoritiesSets = () => {
-    return (
-        <div>
-            <div>Favorities Sets</div>
-            <div className="favorities-sets">
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-                <div className="favorities-sets__item">
-                    <div>100 words</div>
-                    <img src="/images/picture.jpg" alt="" />
-                    <div>
-                        <p>Top 100 words</p>
-                    </div>
-                    <button type="button" class="btn btn-success w-100">
-                        Learn
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+  const titleArray = [
+    'Most pupular 1000 words',
+    'Intermediate 500 words',
+    'Languages',
+    'Arts',
+    'Culture',
+    'Nature',
+    'Languages',
+    'Arts',
+    'Culture',
+    'Nature',
+  ];
+  return (
+    <div className="w-75 m-auto">
+      <div className="mb-20">Favorities Sets</div>
+      <CardSet wrap={5} titleArray={titleArray} />
+    </div>
+  );
 };
 
 export default FavoritiesSets;
